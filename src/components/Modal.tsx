@@ -45,7 +45,7 @@ class ModalWindow extends React.Component<any> {
         });
     }
 
-    addBlock = () => {
+    addBlock = (e:any) => {
         this.props.onHide();
         this.props.procedure.push(
             {
@@ -56,6 +56,7 @@ class ModalWindow extends React.Component<any> {
                 end: this.state.formGridEndTime
             });
         this.clearFields();
+        e.preventDefault();
     };
 
     clearFields = () =>  {

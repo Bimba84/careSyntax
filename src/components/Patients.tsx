@@ -8,19 +8,19 @@ class Patients extends React.Component<IPatients> {
     public render() {
         return (
             <div className="App-column-left">
-                <div className="App-home"><NavLink to='/' exact={true} activeClassName='is-active'>Dashboard Schedule</NavLink></div>
+                <div className="App-home"><Link to='/'>Dashboard Schedule</Link></div>
                 <h4>My Patients</h4>
                 <ul className="App-patient-list">
                     {this.props.list!.map((item: IPatient) => {
                         return <li key={item.id}>
-                            <NavLink activeClassName='is-active' to={{
+                            <Link to={{
                                 pathname: '/patient/' + item.id,
                                 patientParams: {
                                     name: item.name,
                                     sex: item.sex,
                                     bDay: item.bDay
                                 }
-                            }}>{item.name}</NavLink >
+                            }}>{item.name}</Link >
                         </li>
                     })}
                 </ul>
