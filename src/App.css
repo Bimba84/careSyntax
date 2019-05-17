@@ -1,26 +1,168 @@
-.App {
-  text-align: center;
+html, body, #root {
+    height: 100%;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.App {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+    background: rgb(40, 44, 52);
+  height: 80px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
   color: white;
+    padding: 0 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.App-header img {
+    height: 80px;
+}
+
+.App-content {
+    display: flex;
+    height: 100%;
+}
+
+.App-column-left {
+    background-color: rgb(53, 59, 69);
+    min-width: 200px;
+    height: 100%;
+}
+
+.App-column-left h4 {
+    text-align: center;
+    color: white;
+    background-color: #53565D;
+    margin: 0;
+    padding: 20px;
+}
+
+.App-home {
+    cursor: pointer;
+    border-bottom: 1px solid #282c34;
+}
+
+.App-home a {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    padding: 20px 10px;
+    display: block;
+}
+
+.App-home a.is-active {
+    background-color: #20232A;
+}
+
+.App-home:hover {
+    background-color: #20232A;
+}
+
+.App-home a:hover {
+    color: white;
+}
+
+.App-patient {
+    width: 100%;
+    padding: 20px;
+}
+
+.App-patient-card {
+    background: #53565D;
+    color: white;
+    padding: 20px;
+    width: 400px;
+}
+
+.App-patient-card > div {
+    padding-bottom: 20px;
+}
+
+.App-label {
+    font-weight: bold;
+}
+
+.App-patient-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.App-patient-list li {
+    padding: 0;
+    cursor: pointer;
+    border-bottom: 1px solid #282c34;
+}
+
+.App-patient-list li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    padding: 10px;
+}
+
+.App-patient-list li a.is-active {
+    background-color: #20232A;
+}
+
+.App-patient-list li a:hover {
+    background-color: #20232A;
+    text-decoration: underline;
+}
+
+.App-schedule {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+}
+
+.App-schedule-grid {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+}
+
+.App-schedule-buttonGroup {
+    flex: 0 0 200px;
+    text-align: right;
+}
+
+.App-procedure {
+    background-color: #53565D;
+    color: white;
+    padding: 20px;
+    margin: 0 20px 20px 0;
+    min-height: 160px;
+    width: 250px;
+    position: relative;
+}
+
+.App-procedure-row {
+    display: flex;
+    font-size: 14px;
+    padding-right: 20px;
+    z-index: 10;
+    border-bottom: 1px solid #75787D;
+}
+
+.App-procedure-row label {
+    flex: 0 1 120px;
+    font-weight: bold;
+    padding-right: 20px;
+    margin-bottom: 0;
+    padding: 5px 10px 5px 0;
+}
+
+.App-procedure-row span {
+    flex: 1;
+    width: 120px;
+    word-wrap: break-word;
+    display: block;
+    padding: 5px 0;
 }
 
 @keyframes App-logo-spin {
